@@ -1,10 +1,10 @@
-html{
+html {
     width: 100%;
     height: 100%;
 }
 
 
-body{
+body {
     font-family: "DM Sans";
     display: flex;
     justify-content: center;
@@ -13,24 +13,24 @@ body{
     height: 100%;
 }
 
-h1{
-    font-weight: 400;
+h1 {
+    font-weight: 500;
 }
 
-p{
+p {
     font-size: 18px;
 }
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 300px auto auto auto 0 ;
-    gap: 10px;
+    grid-template-rows: 300px auto 250px auto 0;
+    gap: 20px;
     height: 90%;
     background-color: whitesmoke;
 }
 
-.item-1{
+.item-1 {
     display: flex;
     flex-direction: column;
     color: white;
@@ -41,40 +41,61 @@ p{
     grid-area: 1/2/ span 2/span 2;
 }
 
-.item-1 h1{
+.item-1 h1 {
     text-align: center;
     font-size: 50px;
 }
 
-.item-1 img{
+.item-1 img {
     margin-top: -18px;
     width: 150px;
     height: 30px;
 }
 
-.item-1 span{
+.item-1 span {
     color: hsl(39, 100%, 71%);
 }
 
-.item-2{
+.item-2 {
     display: flex;
+    flex-direction: column;
     color: black;
     background-color: white;
     border-radius: 15px;
     height: 100%;
     grid-area: 3/2/span 2;
+    overflow: hidden;
 }
 
-.item-3{
-     display: flex;
+.item-2 h1 {
+    margin-left: 20px;
+}
+
+.item-2 img {
+    width: 400px;
+}
+
+.item-3 {
+    display: flex;
+    flex-direction: column;
     color: black;
-    background-color: white;
+    background-color: hsl(39, 100%, 71%);
     border-radius: 15px;
     height: 100%;
     grid-area: 3/3/span 2;
+    overflow: hidden;
 }
 
-.item-4{
+.item-3 h1{
+    margin-left: 20px;
+}
+
+.item-3 img{
+    width: 260px;
+    margin-left: 20px;
+}
+
+.item-4 {
     display: flex;
     flex-direction: column;
     color: black;
@@ -85,12 +106,12 @@ p{
     overflow: hidden;
 }
 
-.item-4 img{
+.item-4 img {
     width: 300px;
     height: 600px;
 }
 
-.item-5{
+.item-5 {
     display: flex;
     color: white;
     background-color: hsl(256, 67%, 59%);
@@ -99,7 +120,7 @@ p{
     grid-area: 5/3/ span 2/span 2;
 }
 
-.item-6{
+.item-6 {
     display: flex;
     color: black;
     background-color: white;
@@ -109,7 +130,7 @@ p{
     grid-area: 5/2/span 2;
 }
 
-.item-7{
+.item-7 {
     display: flex;
     flex-direction: column;
     color: black;
@@ -119,25 +140,25 @@ p{
     grid-area: 1/1/span 3;
 }
 
-.item-7 h1{
+.item-7 h1 {
     font-weight: 600;
 }
 
-.item-7 span{
-    color:  hsl(256, 67%, 59%);
+.item-7 span {
+    color: hsl(256, 67%, 59%);
     font-style: italic;
 }
 
-.item-7 img{
+.item-7 img {
     height: 100px;
     width: 230px;
 }
 
-.item-8{
+.item-8 {
     display: flex;
     color: black;
     background-color: hsl(39, 100%, 71%);
     border-radius: 15px;
     padding: 30px;
-    grid-area: 4/1/ span 3;
+    grid-area: 4/1/ span 4;
 }
