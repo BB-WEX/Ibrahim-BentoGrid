@@ -24,9 +24,9 @@ p {
 .container {
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 300px auto 250px auto 0;
+    grid-template-rows: 300px auto 90px auto 0;
     gap: 20px;
-    height: 90%;
+    height: fit-content;
     background-color: whitesmoke;
 }
 
@@ -81,7 +81,7 @@ p {
     color: black;
     background-color: hsl(39, 100%, 71%);
     border-radius: 15px;
-    height: 100%;
+    height: 330px;
     grid-area: 3/3/span 2;
     overflow: hidden;
 }
@@ -91,8 +91,8 @@ p {
 }
 
 .item-3 img{
-    width: 260px;
-    margin-left: 20px;
+    width: 250px;
+    margin-left: 25px;
 }
 
 .item-4 {
@@ -107,8 +107,8 @@ p {
 }
 
 .item-4 img {
-    width: 300px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
 }
 
 .item-5 {
@@ -120,15 +120,30 @@ p {
     grid-area: 5/3/ span 2/span 2;
 }
 
+.item-5 img{
+    width: 200px;
+}
+
 .item-6 {
     display: flex;
+    flex-direction: column;
     color: black;
     background-color: white;
     border-radius: 15px;
-    padding: 30px;
     height: 100%;
     grid-area: 5/2/span 2;
+    overflow: hidden;
 }
+
+.item-6 h1{
+    margin-left: 20px;
+}
+
+.item-6 img{
+    width: 260px;
+    margin-left: 20px;
+}
+
 
 .item-7 {
     display: flex;
@@ -138,6 +153,7 @@ p {
     border-radius: 15px;
     padding: 30px;
     grid-area: 1/1/span 3;
+    /* height: 360px; */
 }
 
 .item-7 h1 {
@@ -156,9 +172,17 @@ p {
 
 .item-8 {
     display: flex;
+    flex-direction: column;
     color: black;
     background-color: hsl(39, 100%, 71%);
     border-radius: 15px;
     padding: 30px;
-    grid-area: 4/1/ span 4;
+    grid-area: 3/1/ span 4;
+    height: 425px;
+    transform: translateY(100px);
+}
+
+.item-8 img{
+    margin-top: 50px;
+    width: 260px;
 }
