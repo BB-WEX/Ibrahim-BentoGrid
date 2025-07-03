@@ -3,6 +3,14 @@ html {
     height: 100%;
 }
 
+:root{
+    --colour1: rgb(255, 255, 255);
+    --colour2: hsl(256, 67%, 59%);
+    --colour3: hsl(254, 88%, 90%);
+    --colour4: hsl(39, 100%, 71%);
+    --colour5: hsl(31, 66%, 93%);
+    --bgColour: whitesmoke;
+}
 
 body {
     font-family: "DM Sans";
@@ -11,6 +19,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+    background-color: var(--bgColour);
 }
 
 h1 {
@@ -27,7 +36,7 @@ p {
     grid-template-rows: 300px auto 90px auto 0;
     gap: 20px;
     height: fit-content;
-    background-color: whitesmoke;
+    background-color: var(--bgColour);
 }
 
 .item-1 {
@@ -35,7 +44,7 @@ p {
     flex-direction: column;
     color: white;
     align-items: center;
-    background-color: hsl(256, 67%, 59%);
+    background-color: var(--colour2);
     border-radius: 15px;
     padding: 20px;
     grid-area: 1/2/ span 2/span 2;
@@ -43,7 +52,7 @@ p {
 
 .item-1 h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .item-1 img {
@@ -53,14 +62,14 @@ p {
 }
 
 .item-1 span {
-    color: hsl(39, 100%, 71%);
+    color: var(--colour4);
 }
 
 .item-2 {
     display: flex;
     flex-direction: column;
     color: black;
-    background-color: white;
+    background-color: var(--colour1);
     border-radius: 15px;
     height: 100%;
     grid-area: 3/2/span 2;
@@ -79,18 +88,18 @@ p {
     display: flex;
     flex-direction: column;
     color: black;
-    background-color: hsl(39, 100%, 71%);
+    background-color: var(--colour4);
     border-radius: 15px;
     height: 330px;
     grid-area: 3/3/span 2;
     overflow: hidden;
 }
 
-.item-3 h1{
+.item-3 h1 {
     margin-left: 20px;
 }
 
-.item-3 img{
+.item-3 img {
     width: 250px;
     margin-left: 25px;
 }
@@ -99,7 +108,7 @@ p {
     display: flex;
     flex-direction: column;
     color: black;
-    background-color: hsl(254, 88%, 90%);
+    background-color: var(--colour3);
     border-radius: 15px;
     padding: 20px;
     grid-area: 1/4/ span 4;
@@ -114,13 +123,13 @@ p {
 .item-5 {
     display: flex;
     color: white;
-    background-color: hsl(256, 67%, 59%);
+    background-color: var(--colour2);
     border-radius: 15px;
     padding: 30px;
     grid-area: 5/3/ span 2/span 2;
 }
 
-.item-5 img{
+.item-5 img {
     width: 200px;
 }
 
@@ -128,20 +137,24 @@ p {
     display: flex;
     flex-direction: column;
     color: black;
-    background-color: white;
+    background-color: var(--colour1);
     border-radius: 15px;
     height: 100%;
     grid-area: 5/2/span 2;
     overflow: hidden;
 }
 
-.item-6 h1{
+.item-6 h1 {
     margin-left: 20px;
 }
 
-.item-6 img{
+.item-6 img {
     width: 260px;
     margin-left: 20px;
+}
+
+.item-6 br{
+    display: none;
 }
 
 
@@ -149,7 +162,7 @@ p {
     display: flex;
     flex-direction: column;
     color: black;
-    background-color: hsl(31, 66%, 93%);
+    background-color: var(--colour5);
     border-radius: 15px;
     padding: 30px;
     grid-area: 1/1/span 3;
@@ -161,7 +174,7 @@ p {
 }
 
 .item-7 span {
-    color: hsl(256, 67%, 59%);
+    color: var(--colour2);
     font-style: italic;
 }
 
@@ -174,7 +187,7 @@ p {
     display: flex;
     flex-direction: column;
     color: black;
-    background-color: hsl(39, 100%, 71%);
+    background-color: var(--colour4);
     border-radius: 15px;
     padding: 30px;
     grid-area: 3/1/ span 4;
@@ -182,7 +195,94 @@ p {
     transform: translateY(100px);
 }
 
-.item-8 img{
+.item-8 img {
     margin-top: 50px;
     width: 260px;
+}
+
+
+@media screen and (max-width: 375px) {
+    
+    body{
+        justify-content: start;
+        align-items: unset;
+    }
+
+    .container {
+        grid-template-columns: 360px;
+        grid-template-rows: 300px;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .container * {
+        grid-area: unset;
+
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .item-8 {
+        transform: none;
+        height: auto;
+    }
+
+    .item-8 h1, .item-7 h1{
+        font-size: 30px;
+    }
+
+    .item-8 img {
+        width: 240px;
+        margin-top: unset;
+    }
+
+    .item-7{
+        text-align: center;
+    }
+
+    .item-7 img{
+        align-self: center;
+    }
+
+    .item-6{
+        padding-bottom: 10px;
+    }
+
+    .item-6 br{
+        display: block;
+    }
+
+    .item-6 span{
+        font-size: 40px;
+    }
+
+    .item-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item-5 img {
+        align-self: center;
+        width: 250px;
+    }
+
+    .item-4 img {
+        align-self: center;
+        width: 300px;
+        height: 250px;
+    }
+
+    .item-4 p{
+        text-align: center;
+    }
+
+    .item-3{
+        height: auto;
+    }
+
+    .item-1Breaker {
+        display: none;
+    }
 }
